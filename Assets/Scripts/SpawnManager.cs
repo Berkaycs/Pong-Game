@@ -14,23 +14,14 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        if (gameManager.isBallSpawned == false && gameManager.gameOver == false)
-        {
-            OnEnable();
-        }
-        else if (gameManager.isBallSpawned == true | gameManager.gameOver == true)
-        {
-            OnDisable();
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
     }
-
+    /*
     private void OnEnable()
     {
         InvokeRepeating("SpawnBall", spawnDelay, spawnRate);
@@ -47,4 +38,5 @@ public class SpawnManager : MonoBehaviour
         spawnPos = new Vector3(0.5f, 0.1f, -1);
         Instantiate(spawnBall[spawnIndex], spawnPos, spawnBall[spawnIndex].transform.rotation);
     }
+    */
 }

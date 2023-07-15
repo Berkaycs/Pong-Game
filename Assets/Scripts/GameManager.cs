@@ -5,39 +5,69 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public bool gameOver = false;
-    public bool isBallSpawned = false;
+    public MoveBall ball;
+    public Win player;
+    public Win computer;
+    public GameOverScreen gameOverScreen;
+    private AudioSource winSound;
 
     // Score display
-    public TextMeshProUGUI score1;
-    public TextMeshProUGUI score2;
-    public int score_1 = 0;
-    public int score_2 = 0;
+    public TextMeshProUGUI playerScoreText;
+    public TextMeshProUGUI computerScoreText;
+    private int player_score = 0;
+    private int computer_score = 0;
 
-    
+    public Paddle playerPaddle;
+    public Paddle computerPaddle;
+
+
     void Start()
     {
-        score_1 = 0;
-        score_2 = 0;
-        score1 = GameObject.Find("Score_1").GetComponent<TextMeshProUGUI>();
-        score2 = GameObject.Find("Score_2").GetComponent<TextMeshProUGUI>();
-        score1.text = "Score: " + score_1;
-        score2.text = "Score: " + score_2;
+        winSound = GetComponent<AudioSource>();
+        playerScoreText.text = "Score: " + player_score;
+        computerScoreText.text = "Score: " + computer_score;
     }
 
-    
-    void Update()
+    public void PlayerScores()
     {
-
+        player_score++;
+        playerScoreText.text = "Score: " + player_score;
+        if (player_score < 10)
+        {
+            ResetRound();
+        }
+        else
+        {
+            player.WinText();
+            winSound.Play();
+            // wait 3 seconds than call
+            gameOverScreen.Invoke("GameOver", 3);
+        }
+        
     }
 
-    public void addScore_1(int point)
+    public void ComputerScores()
     {
-        score_1 += point;
+        computer_score++;
+        computerScoreText.text = "Score: " + computer_score;
+        if (computer_score < 10)
+        {
+            ResetRound();
+        }
+        else
+        {
+            computer.WinText();
+            winSound.Play();
+            // wait 3 seconds than call
+            gameOverScreen.Invoke("GameOver", 3);
+        }
     }
 
-    public void addScore_2(int point)
+    private void ResetRound()
     {
-        score_2 += point;
+        this.ball.ResetPosition();
+        this.playerPaddle.ResetPosition();
+        this.computerPaddle.ResetPosition();
+        this.ball.Move();
     }
 }
