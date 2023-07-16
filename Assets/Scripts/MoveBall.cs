@@ -25,12 +25,12 @@ public class MoveBall : MonoBehaviour
 
     public void Move()
     {
-        float speed = 4.5f;
+        float speed = 4f;
         int choice = Random.Range(1, 3);
         
-        float randomX1 = Random.Range(-5, -1);
-        float randomX2 = Random.Range(1, 5);
-        float randomY = Random.Range(-4, 4);
+        float randomX1 = Random.Range(-3, -2);
+        float randomX2 = Random.Range(2, 3);
+        float randomY = Random.Range(-1, 1);
 
         if (choice == 1)
         {

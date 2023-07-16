@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69da607ac1bfadb44a0a2bc8f2f1050a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceStrength: 15
+  bounceStrength: 20
 --- !u!82 &639627068
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2221,7 +2221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69da607ac1bfadb44a0a2bc8f2f1050a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceStrength: 15
+  bounceStrength: 25
 --- !u!1 &951387590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,7 +2654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69da607ac1bfadb44a0a2bc8f2f1050a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceStrength: 15
+  bounceStrength: 25
 --- !u!114 &1335787285 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8684877496086006849, guid: baab59a66137a784b8997ad32f2b70fb, type: 3}
@@ -3292,7 +3292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7da0f8df4d881a4ba36f94556c8e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 25
   ball: {fileID: 1335787287}
 --- !u!114 &2024708617
 MonoBehaviour:
@@ -3306,7 +3306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69da607ac1bfadb44a0a2bc8f2f1050a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceStrength: 15
+  bounceStrength: 20
 --- !u!82 &2024708618
 AudioSource:
   m_ObjectHideFlags: 0
